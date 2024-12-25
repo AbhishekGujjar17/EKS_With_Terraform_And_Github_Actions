@@ -1,4 +1,4 @@
-# Production-Ready EKS Cluster with Terraform and GitHub Actions
+# Production Ready EKS Cluster with Terraform and GitHub Actions
 
 ![architecture_diagram](./eks_tf_github_actions.gif)
 
