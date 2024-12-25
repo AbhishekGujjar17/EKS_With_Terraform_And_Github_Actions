@@ -1,6 +1,6 @@
 # Production-Ready EKS Cluster with Terraform and GitHub Actions
 
-![./eks_tf_github_actions.gif](architecture_diagram)
+![architecture_diagram](./eks_tf_github_actions.gif)
 
 This project demonstrates how to configure a production-ready EKS (Elastic Kubernetes Service) cluster using Terraform (an Infrastructure as Code tool) and automate the deployment pipeline using GitHub Actions. The setup follows best practices for industry-level implementations.
 
