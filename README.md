@@ -57,7 +57,7 @@ To get started, ensure the following:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/AbhishekGujjar17/EKS_With_Terraform_Github_Actions
+   git clone https://github.com/AbhishekGujjar17/EKS_With_Terraform_And_Github_Actions.git
    ```
 
 2. **Initialize and Apply Terraform**:
