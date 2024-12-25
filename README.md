@@ -1,7 +1,6 @@
-
 # Production-Ready EKS Cluster with Terraform and GitHub Actions
 
-![architecture_diagram.png](architecture_diagram.png)
+![./eks_tf_github_actions.gif](architecture_diagram)
 
 This project demonstrates how to configure a production-ready EKS (Elastic Kubernetes Service) cluster using Terraform (an Infrastructure as Code tool) and automate the deployment pipeline using GitHub Actions. The setup follows best practices for industry-level implementations.
 
@@ -13,6 +12,7 @@ The project involves configuring a modular EKS cluster and automating its deploy
 2. **GitHub Actions**: Automates the deployment process, ensuring consistent and repeatable infrastructure setups.
 
 ### Why GitHub Actions?
+
 GitHub Actions is a trending CI/CD tool in the DevOps market, offering seamless integration with repositories and a wide range of features. This project provides an opportunity to explore its capabilities by automating the deployment of AWS infrastructure.
 
 ## Features
@@ -55,11 +55,13 @@ To get started, ensure the following:
 ## Deployment Steps
 
 1. **Clone the Repository**:
+
    ```bash
-   git clone https://github.com/YourUsername/EKS-Terraform-GitHub-Actions.git
+   git clone https://github.com/AbhishekGujjar17/EKS_With_Terraform_Github_Actions
    ```
 
 2. **Initialize and Apply Terraform**:
+
    ```bash
    cd eks
    terraform init
@@ -68,10 +70,12 @@ To get started, ensure the following:
    ```
 
 3. **Configure GitHub Actions**:
+
    - Add AWS credentials to your GitHub repository secrets.
    - Review and customize the workflow file (`.github/workflows/terraform.yaml`).
 
 4. **Run GitHub Actions Workflow**:
+
    - Trigger the workflow manually through the Actions tab in your repository.
    - Provide the required parameters (e.g., `.tfvars` file path and action type).
 
@@ -81,6 +85,7 @@ To get started, ensure the following:
 ## Cleanup
 
 To avoid incurring unnecessary costs, destroy the resources:
+
 ```bash
 terraform destroy
 ```
