@@ -63,11 +63,9 @@ To get started, ensure the following:
    ```
 
 2. **Initialize and Apply Terraform**:
-3. 
-   
-     ```bash
+    ```bash
      cd eks
-     ```
+    ```
    - Modify `backend.tf` for S3 bucket and DynamoDB table.
    - Initialize and validate Terraform:
      ```bash
