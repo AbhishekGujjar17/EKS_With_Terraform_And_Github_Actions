@@ -34,18 +34,20 @@ To get started, ensure the following:
 
 ```
 ├── module
-│   ├── gather.tf
+│   ├── data.tf
 │   ├── vpc.tf
 │   ├── iam.tf
+│   ├── variables.tf
 │   └── eks.tf
+
 ├── eks
 │   ├── main.tf
 │   ├── backend.tf
 │   ├── variables.tf
-│   └── terraform.tfvars
+│   └── dev.tfvars
 ├── .github
 │   └── workflows
-│       └── terraform.yaml
+│       └── pipeline.yml
 ```
 
 - **module/**: Contains modularized Terraform scripts for VPC, IAM, and EKS.
@@ -61,25 +63,34 @@ To get started, ensure the following:
    ```
 
 2. **Initialize and Apply Terraform**:
+3. 
+   
+     ```bash
+     cd eks
+     ```
+   - Modify `backend.tf` for S3 bucket and DynamoDB table.
+   - Initialize and validate Terraform:
+     ```bash
+     terraform init
+     terraform validate
+     ```
+   - Plan and apply the infrastructure:
+     ```bash
+     terraform plan -var-file=dev.tfvars
+     terraform apply -var-file=dev.tfvars --auto-approve
+     ```
 
-   ```bash
-   cd eks
-   terraform init
-   terraform plan
-   terraform apply
-   ```
-
-3. **Configure GitHub Actions**:
+4. **Configure GitHub Actions**:
 
    - Add AWS credentials to your GitHub repository secrets.
    - Review and customize the workflow file (`.github/workflows/terraform.yaml`).
 
-4. **Run GitHub Actions Workflow**:
+5. **Run GitHub Actions Workflow**:
 
    - Trigger the workflow manually through the Actions tab in your repository.
    - Provide the required parameters (e.g., `.tfvars` file path and action type).
 
-5. **Validate Resources**:
+6. **Validate Resources**:
    - Verify the creation of VPC, subnets, NAT gateway, EKS cluster, and node groups in the AWS Management Console.
 
 ## Cleanup
